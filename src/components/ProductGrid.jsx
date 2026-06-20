@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import { CaretLeft, CaretRight, ArrowRight } from '@phosphor-icons/react';
+import heroImg from '../assets/hero-image.jpg';
+import tentImg from '../assets/dell-tent-new.jpg';
+import tabletImg from '../assets/dell-2.jpg';
 
 const products = [
-  { id: 1, title: 'Laptop Mode', desc: 'Standard typing and productivity.', img: '/src/assets/hero-image.jpg' },
-  { id: 2, title: 'Tent Mode', desc: 'Perfect for watching videos and presentations.', img: '/src/assets/dell-tent-new.jpg' },
-  { id: 4, title: 'Tablet Mode', desc: 'Fold it back completely for reading or drawing.', img: '/src/assets/dell-2.jpg' }
+  { id: 1, title: 'Laptop Mode', desc: 'Standard typing and productivity.', img: heroImg },
+  { id: 2, title: 'Tent Mode', desc: 'Perfect for watching videos and presentations.', img: tentImg },
+  { id: 4, title: 'Tablet Mode', desc: 'Fold it back completely for reading or drawing.', img: tabletImg }
 ];
 
 export default function ProductGrid() {
