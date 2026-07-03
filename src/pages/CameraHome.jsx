@@ -3,6 +3,7 @@ import CameraHeader from '../components/camera/CameraHeader';
 import CameraHero from '../components/camera/CameraHero';
 import CameraTrustBar from '../components/camera/CameraTrustBar';
 import CameraFeatures from '../components/camera/CameraFeatures';
+import CameraProductShowcase from '../components/camera/CameraProductShowcase';
 import CameraAudience from '../components/camera/CameraAudience';
 import CameraStats from '../components/camera/CameraStats';
 import CameraTestimonials from '../components/camera/CameraTestimonials';
@@ -23,6 +24,7 @@ export default function CameraHome() {
       <CameraHero onOrderClick={openModal} />
       <CameraTrustBar />
       <CameraFeatures />
+      <CameraProductShowcase />
       <CameraAudience />
       <CameraStats />
       <CameraTestimonials />
