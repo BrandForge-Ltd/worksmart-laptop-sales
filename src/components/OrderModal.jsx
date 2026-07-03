@@ -35,7 +35,7 @@ export default function OrderModal({ isOpen, onClose }) {
     e.preventDefault();
     // Redirect to Paystack payment link
     // The Thank You page URL should be configured inside the Paystack dashboard
-    window.location.href = "https://paystack.com/pay/worksmart-laptop";
+    window.location.href = "https://paystack.com/pay/sopproducts-laptop";
   };
 
   return (

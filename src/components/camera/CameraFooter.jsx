@@ -1,24 +1,22 @@
 import { FacebookLogo, TwitterLogo, InstagramLogo, MapPin, Phone, EnvelopeSimple } from '@phosphor-icons/react';
 
-export default function Footer() {
+export default function CameraFooter() {
   return (
     <footer className="bg-brand-dark text-white pt-20 pb-10 px-6 lg:px-12 relative z-20 border-t border-gray-800">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-2xl font-bold uppercase tracking-tight mb-6">SOP<span className="text-brand-lime">Products</span></h2>
+          <h2 className="text-2xl font-bold uppercase tracking-tight mb-6">
+            SOP<span className="text-brand-lime">Products</span>
+          </h2>
           <p className="text-gray-400 leading-relaxed mb-6">
             Providing premium, reliable, and versatile technology solutions for students, professionals, and creators. We deliver quality you can trust.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-brand-gray/10 flex items-center justify-center hover:bg-brand-lime hover:text-brand-dark transition-colors">
-              <FacebookLogo weight="fill" size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-brand-gray/10 flex items-center justify-center hover:bg-brand-lime hover:text-brand-dark transition-colors">
-              <TwitterLogo weight="fill" size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-brand-gray/10 flex items-center justify-center hover:bg-brand-lime hover:text-brand-dark transition-colors">
-              <InstagramLogo weight="fill" size={20} />
-            </a>
+            {[FacebookLogo, TwitterLogo, InstagramLogo].map((Icon, i) => (
+              <a key={i} href="#" className="w-10 h-10 rounded-full bg-brand-gray/10 flex items-center justify-center hover:bg-brand-lime hover:text-brand-dark transition-colors">
+                <Icon weight="fill" size={20} />
+              </a>
+            ))}
           </div>
         </div>
 

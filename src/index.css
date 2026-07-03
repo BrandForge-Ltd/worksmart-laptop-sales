@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Share+Tech+Mono&display=swap');
 @import "tailwindcss";
 
 @theme {
+  /* ── Laptop Page Tokens ── */
   --color-brand-bg: #F5F5FA;
   --color-brand-dark: #16151E;
   --color-brand-lime: #D6FF00;
@@ -10,9 +12,26 @@
   --color-brand-text: #2D2C38;
   --color-brand-muted: #6B6A75;
 
+  /* ── Camera Page Tokens ── */
+  --color-cam-bg: #0A0D14;
+  --color-cam-surface: #10141F;
+  --color-cam-surface-2: #161B2A;
+  --color-cam-orange: #FF6B00;
+  --color-cam-orange-dim: rgba(255, 107, 0, 0.15);
+  --color-cam-blue: #00C2FF;
+  --color-cam-blue-dim: rgba(0, 194, 255, 0.12);
+  --color-cam-red: #FF2D2D;
+  --color-cam-text: #E8EAF0;
+  --color-cam-muted: #7A8090;
+  --color-cam-border: rgba(255, 255, 255, 0.07);
+
   --font-sans: 'Outfit', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: 'Share Tech Mono', ui-monospace, monospace;
 
   --shadow-neon: 0 0 20px rgba(214, 255, 0, 0.3);
+  --shadow-cam-orange: 0 0 24px rgba(255, 107, 0, 0.35);
+  --shadow-cam-blue: 0 0 20px rgba(0, 194, 255, 0.25);
+  --shadow-cam-monitor: 0 0 0 1px rgba(0,194,255,0.25), 0 0 24px rgba(0,194,255,0.1);
 }
 
 @layer base {
@@ -21,9 +40,16 @@
     color: var(--color-brand-text);
     overflow-x: hidden;
   }
+
+  .cam-page {
+    background-color: var(--color-cam-bg);
+    color: var(--color-cam-text);
+    font-family: var(--font-sans);
+  }
 }
 
 @layer utilities {
+  /* ── Laptop utilities ── */
   .hero-blob {
     position: absolute;
     right: -5%;
@@ -39,6 +65,54 @@
   .glass-btn {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
+  }
+
+  /* ── Camera page utilities ── */
+  .cam-glass {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-cam-border);
+  }
+
+  .cam-scanline {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.018) 2px,
+      rgba(255,255,255,0.018) 4px
+    );
+  }
+
+  .cam-glow-orange {
+    box-shadow: var(--shadow-cam-orange);
+  }
+
+  .cam-glow-blue {
+    box-shadow: var(--shadow-cam-blue);
+  }
+
+  .cam-monitor-frame {
+    box-shadow: var(--shadow-cam-monitor);
+  }
+
+  .font-mono-cam {
+    font-family: var(--font-mono);
+  }
+
+  /* REC pulse animation */
+  @keyframes rec-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+
+  .animate-rec {
+    animation: rec-pulse 1.4s ease-in-out infinite;
+  }
+
+  /* Stock bar gradient */
+  .stock-bar {
+    background: linear-gradient(90deg, #FF6B00, #FF2D2D);
   }
 }
 

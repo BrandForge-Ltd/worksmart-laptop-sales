@@ -1,6 +1,6 @@
 import { X, ArrowUpRight } from '@phosphor-icons/react';
 
-export default function Header({ onOrderClick }) {
+export default function CameraHeader({ onOrderClick }) {
   return (
     <header className="w-full px-6 lg:px-12 py-6 flex items-center justify-between relative z-20">
       <div className="flex items-center gap-2">
@@ -8,9 +8,7 @@ export default function Header({ onOrderClick }) {
         <span className="font-bold text-xl tracking-tight text-brand-dark uppercase">SOPProducts</span>
       </div>
 
-
-
-      <button 
+      <button
         onClick={onOrderClick}
         className="bg-white border border-brand-gray text-brand-dark rounded-full px-5 py-2.5 text-sm font-bold flex items-center gap-3"
       >
