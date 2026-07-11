@@ -51,7 +51,7 @@ export default function Hero({ onOrderClick }) {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 items-center">
           <button 
             onClick={onOrderClick}
             className="bg-brand-lime hover:bg-[#bce000] text-brand-dark px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all hover:scale-105 shadow-xl shadow-brand-lime/20"
@@ -59,6 +59,9 @@ export default function Hero({ onOrderClick }) {
             Order Now
             <ArrowRight weight="bold" size={20} />
           </button>
+          <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold text-sm flex items-center gap-2">
+            🚚 Pay On Delivery Available
+          </div>
         </div>
       </div>
 
