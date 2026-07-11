@@ -1,10 +1,12 @@
 import { useState, useEffect, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, WhatsappLogo, CheckCircle, WarningCircle, ArrowRight, ArrowLeft } from '@phosphor-icons/react';
 import { FREE_POD_STATES } from '../../utils/constants';
 import { states as getStates, lgas as getLgas } from 'nigerian-states-and-lgas';
 
 export default function CameraOrderModal({ isOpen, onClose }) {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
@@ -106,6 +108,8 @@ export default function CameraOrderModal({ isOpen, onClose }) {
 
     const message = `Hello, I want to order the Smart WiFi Security Camera.%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*State:* ${formData.state}%0A*LGA:* ${formData.lga}%0A*Address:* ${formData.address}%0A%0A*Delivery Terms:* ${deliveryTerms}`;
     window.open(`https://wa.me/2348161892581?text=${message}`, '_blank');
+    onClose();
+    navigate('/thank-you');
   };
 
   const slideVariants = {
