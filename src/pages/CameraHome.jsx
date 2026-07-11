@@ -16,7 +16,12 @@ const CameraOrderModal = lazy(() => import('../components/camera/CameraOrderModa
 
 export default function CameraHome() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
+  const openModal = () => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'InitiateCheckout');
+    }
+    setIsModalOpen(true);
+  };
 
   return (
     <main className="flex-1 w-full relative overflow-hidden">

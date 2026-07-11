@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && mkdir -p dist/camera dist/thank-you && cp dist/index.html dist/camera/index.html && cp dist/index.html dist/thank-you/index.html",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
     "framer-motion": "^12.40.0",
+    "nigerian-states-and-lgas": "^1.0.8",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.18.0"
@@ -28,6 +29,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "postcss": "^8.5.15",
+    "puppeteer": "^25.3.0",
     "tailwindcss": "^4.3.1",
     "vite": "^8.0.12"
   }

@@ -19,6 +19,9 @@ export default function Home() {
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
 
   const handleOrderClick = () => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'InitiateCheckout');
+    }
     setIsOrderModalOpen(true);
   };
 
