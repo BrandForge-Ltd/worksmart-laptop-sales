@@ -102,7 +102,7 @@ export default function CameraOrderModal({ isOpen, onClose }) {
       window.fbq('track', 'Lead', {
         content_name: 'Smart WiFi Security Camera',
         currency: 'NGN',
-        value: 29500
+        value: 95000
       });
     }
 

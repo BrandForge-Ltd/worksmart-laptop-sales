@@ -56,14 +56,15 @@ export default function CameraFinalCTA({ onOrderClick }) {
 
             <div className="mb-8 flex flex-col">
               <div className="flex items-end gap-3 mb-2">
-                <span className="text-3xl font-black text-white tracking-tighter">₦105,000</span>
+                <span className="text-3xl font-black text-white tracking-tighter">₦95,000</span>
+                <del className="text-gray-400 text-lg font-semibold mb-1">₦145,000</del>
               </div>
               <p className="text-red-400 font-bold text-xs bg-red-900/20 w-max px-3 py-1.5 rounded-full animate-pulse flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                 </span>
-                🔥 Hurry! Only 8 units left in stock
+                🔥 Hurry! Only 3 units left in stock
               </p>
             </div>
 

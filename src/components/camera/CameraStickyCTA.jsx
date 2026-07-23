@@ -23,7 +23,10 @@ export default function CameraStickyCTA({ onOrderClick }) {
         >
           <div className="bg-brand-dark/95 backdrop-blur-md rounded-2xl p-3 flex items-center justify-between shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-gray-800">
             <div className="flex flex-col ml-2">
-              <span className="text-white font-bold text-sm leading-tight">₦105,000</span>
+              <div className="flex items-center gap-2">
+                <span className="text-white font-bold text-sm leading-tight">₦95,000</span>
+                <del className="text-gray-400 text-xs">₦145,000</del>
+              </div>
               <span className="text-gray-400 text-[10px]">V380 PRO Solar Camera</span>
             </div>
 

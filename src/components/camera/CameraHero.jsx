@@ -40,14 +40,15 @@ export default function CameraHero({ onOrderClick }) {
 
         <div className="mb-6">
           <div className="flex items-end gap-3 mb-1">
-            <span className="text-4xl lg:text-5xl font-black text-brand-dark tracking-tighter">₦105,000</span>
+            <span className="text-4xl lg:text-5xl font-black text-brand-dark tracking-tighter">₦95,000</span>
+            <del className="text-gray-400 text-xl font-semibold mb-1">₦145,000</del>
           </div>
           <p className="text-red-600 font-bold text-sm bg-red-100 w-max px-3 py-1 rounded-full animate-pulse flex items-center gap-2">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
             </span>
-            🔥 Only 8 units left at this price!
+            🔥 Flash Sale: Only 3 units left!
           </p>
         </div>
 
