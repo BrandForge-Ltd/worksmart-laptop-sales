@@ -25,15 +25,15 @@ export default function CameraFooter() {
           <ul className="flex flex-col gap-4 text-gray-400">
             <li className="flex items-start gap-3">
               <MapPin weight="bold" size={20} className="text-brand-lime shrink-0 mt-1" />
-              <span>123 Tech Avenue, Innovation District, Lagos, Nigeria.</span>
+              <span>Suit V7, Anambra warehouse, Ijesha bus stop, Oshodi - Apapa express way, Lagos.</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone weight="bold" size={20} className="text-brand-lime shrink-0" />
-              <span>+234 800 000 0000</span>
+              <span>07084456004, 08161892581</span>
             </li>
             <li className="flex items-center gap-3">
               <EnvelopeSimple weight="bold" size={20} className="text-brand-lime shrink-0" />
-              <span>hello@sopproducts.com</span>
+              <span>trustedmedicals@gmail.com</span>
             </li>
           </ul>
         </div>
